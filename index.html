@@ -3,248 +3,287 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Óptica Jaziel</title>
-  <meta name="description" content="Óptica Jaziel - Cuidamos tu visión con estilo" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Óptica Jaziel - Cuidamos tu visión con estilo</title>
+  <meta name="description" content="Óptica Jaziel - Lentes, monturas y atención profesional para tu salud visual." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --primary:#00b4c7; /* aqua-teal */
-      --accent:#007b8f;  /* deeper teal */
-      --muted:#6b7280;
-      --bg:#f7fbfc;
-      --card:#ffffff;
+    :root {
+      --primary: #00b4c7;
+      --accent: #007b8f;
+      --muted: #6b7280;
+      --bg: #f8fcfc;
+      --card: #ffffff;
     }
-    *{box-sizing:border-box}
-    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0;color:#0f1724;background:var(--bg);-webkit-font-smoothing:antialiased}
-    .container{max-width:1100px;margin:28px auto;padding:0 20px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;box-shadow:0 8px 24px rgba(3,54,58,0.12)}
-    nav a{margin-left:16px;color:var(--muted);text-decoration:none;font-weight:600}
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: #0f1724;
+      -webkit-font-smoothing: antialiased;
+    }
 
-    .hero{display:flex;gap:28px;align-items:center;margin:18px 0;padding:18px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.7),rgba(255,255,255,0.5));box-shadow:0 8px 30px rgba(8,17,22,0.04)}
-    .hero .left{flex:1;padding:6px}
-    .eyebrow{color:var(--primary);font-weight:700;font-size:13px}
-    h1{font-size:34px;margin:8px 0 6px}
-    .subtitle{color:var(--muted);margin-bottom:12px}
-    .cta{background:var(--primary);color:white;padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:700;box-shadow:0 8px 20px rgba(0,180,199,0.18)}
+    /* ---------- Layout ---------- */
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
 
-    .hero-visual{width:420px;position:relative;border-radius:12px;overflow:hidden}
-    .hero-visual img{width:100%;height:320px;object-fit:cover;display:block;transform:scale(1.03);transition:transform .9s cubic-bezier(.2,.9,.3,1)}
-    .hero-visual:hover img{transform:scale(1)}
-    .brand-badge{position:absolute;left:14px;bottom:14px;background:linear-gradient(90deg,var(--primary),var(--accent));color:white;padding:10px 14px;border-radius:10px;font-weight:700;box-shadow:0 8px 20px rgba(0,180,199,0.16)}
+    /* ---------- Logo ---------- */
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 70px; height: 70px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #00d9e6, #007b8f);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 28px; font-weight: 800;
+      box-shadow: 0 6px 16px rgba(0, 180, 199, 0.35);
+    }
 
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:26px 0}
-    .card{background:var(--card);border-radius:12px;padding:12px;border:1px solid #eef2f6;box-shadow:0 6px 20px rgba(11,108,247,0.04);transform:translateY(8px);opacity:0;transition:all .6s ease;will-change:transform,opacity}
-    .card.visible{transform:translateY(0);opacity:1}
-    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
-    .card h3{margin:10px 0 6px}
-    .price{font-weight:700}
+    nav a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      transition: color .2s ease;
+    }
+    nav a:hover { color: var(--primary); }
 
-    .services{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-    .service{flex:1;min-width:200px;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfeff);border:1px solid #eef4f6}
+    /* ---------- Hero ---------- */
+    .hero { display: flex; align-items: center; gap: 28px; margin-top: 20px; }
+    .hero-left { flex: 1; animation: fadeIn 1.2s ease forwards; }
+    .hero-left h1 { font-size: 34px; margin-bottom: 8px; color: var(--accent); }
+    .hero-left p { color: var(--muted); margin-bottom: 16px; }
+    .cta {
+      background: var(--primary);
+      color: white;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease;
+    }
+    .cta:hover { transform: scale(1.05); }
 
-    footer{margin-top:28px;padding:18px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    .hero-right {
+      width: 420px; height: 320px;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      animation: slideIn 1.3s ease forwards;
+    }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* chat bubble */
-    .chat-bubble{position:fixed;right:20px;bottom:20px;width:64px;height:64px;border-radius:999px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;box-shadow:0 12px 40px rgba(3,54,58,0.18);cursor:pointer;z-index:1200}
-    .chat-bubble .pulse{position:absolute;width:100%;height:100%;border-radius:999px;animation:ping 2s infinite;filter:blur(6px);opacity:.9}
-    @keyframes ping{0%{transform:scale(.9);opacity:.6}50%{transform:scale(1.2);opacity:0.2}100%{transform:scale(.9);opacity:.6}}
+    /* ---------- Productos ---------- */
+    h2 { margin-top: 50px; font-size: 26px; color: var(--accent); }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid #e9f3f3;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      overflow: hidden;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: all .6s ease;
+    }
+    .card.visible { transform: translateY(0); opacity: 1; }
+    .card img { width: 100%; height: 150px; object-fit: cover; }
+    .card h3 { margin: 8px 12px 4px; }
+    .card p { margin: 0 12px 8px; color: var(--muted); font-size: 14px; }
+    .price { margin: 0 12px 14px; font-weight: 700; color: var(--accent); }
 
-    .chat-panel{position:fixed;right:20px;bottom:96px;width:380px;height:560px;border-radius:14px;overflow:hidden;border:1px solid #e6eef0;background:white;box-shadow:0 24px 60px rgba(4,20,24,0.12);display:none;z-index:1300}
-    .chat-panel header{background:linear-gradient(90deg,var(--primary),var(--accent));color:white;padding:12px;font-weight:700;display:flex;align-items:center;justify-content:space-between}
+    /* ---------- Servicios ---------- */
+    .services {
+      display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px;
+    }
+    .service {
+      flex: 1; min-width: 200px;
+      background: linear-gradient(180deg, #fff, #f5fdfd);
+      border: 1px solid #e4f1f1;
+      padding: 16px;
+      border-radius: 10px;
+      transition: transform .2s ease;
+    }
+    .service:hover { transform: translateY(-4px); }
 
-    /* small screens */
-    @media (max-width:820px){.hero{flex-direction:column}.hero-visual{width:100%}.chat-panel{right:10px;left:10px;width:auto}}
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: 30px;
+      padding: 16px 0;
+      border-top: 1px solid #e5f2f2;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-    /* entrance animations */
-    .fade-in{animation:fadeIn .8s ease both}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-    .reveal{opacity:0;transform:translateY(12px);transition:all .6s ease}
+    /* ---------- Chat bubble ---------- */
+    .chat-bubble {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      display: flex;
+      align-items: center; justify-content: center;
+      font-size: 26px; cursor: pointer;
+      box-shadow: 0 12px 25px rgba(0, 123, 143, 0.4);
+      z-index: 1000;
+    }
+    .chat-bubble::before {
+      content: '';
+      position: absolute;
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: var(--primary);
+      animation: pulse 2s infinite;
+      opacity: .6;
+      z-index: -1;
+    }
 
-    .overlay-text{position:absolute;left:16px;top:16px;background:rgba(0,0,0,0.32);color:white;padding:8px 12px;border-radius:8px;font-weight:700}
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: .6; }
+      50% { transform: scale(1.3); opacity: 0.2; }
+      100% { transform: scale(1); opacity: .6; }
+    }
+
+    .chat-panel {
+      position: fixed;
+      right: 20px; bottom: 100px;
+      width: 380px; height: 560px;
+      background: #fff;
+      border: 1px solid #cfe8e8;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 1200;
+    }
+    .chat-panel header {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      padding: 12px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeIn { from {opacity:0;transform:translateY(20px)} to {opacity:1;transform:none} }
+    @keyframes slideIn { from {opacity:0;transform:translateX(40px)} to {opacity:1;transform:none} }
+
+    @media (max-width:820px) {
+      .hero { flex-direction: column; }
+      .hero-right { width: 100%; }
+      .chat-panel { right: 10px; left: 10px; width: auto; height: 500px; }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <header class="fade-in">
+    <header>
       <div class="brand">
         <div class="logo">OJ</div>
         <div>
-          <div style="font-weight:800;font-size:18px">Óptica Jaziel</div>
-          <div style="font-size:13px;color:var(--muted)">Cuidamos tu visión con estilo</div>
+          <strong style="font-size:18px">Óptica Jaziel</strong><br>
+          <span style="font-size:13px; color:var(--muted)">Cuidamos tu visión con estilo</span>
         </div>
       </div>
       <nav>
         <a href="#productos">Productos</a>
         <a href="#servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
-        <a href="#documentos">Documentos</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="left">
-        <div class="eyebrow">Óptica • Confianza • Estilo</div>
-        <h1>Lentes que complementan tu mirada</h1>
-        <p class="subtitle">Calidad en materiales, asesoría personalizada y envío a nivel nacional. Descubre monturas, tratamientos y soluciones visuales pensadas para ti.</p>
-        <div style="display:flex;gap:12px;align-items:center">
-          <button class="cta" onclick="location.href='#contacto'">Reservar cita</button>
-          <button class="cta" style="background:#fff;color:var(--accent);border:1px solid #e6f6f8" onclick="scrollToProducts()">Ver productos</button>
-        </div>
-        <div style="margin-top:12px;color:var(--muted);font-size:14px">Horario: Lun-Sab 9:30 - 19:00 • WhatsApp: +51 997 424 072</div>
+      <div class="hero-left">
+        <h1>Tu visión, nuestro compromiso</h1>
+        <p>Descubre lentes y monturas que realzan tu estilo y cuidan tu salud visual.</p>
+        <button class="cta" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Ver catálogo</button>
       </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1599854897225-0f7b6f9b8d53?auto=format&fit=crop&w=1200&q=60" alt="persona con lentes" loading="lazy">
-        <div class="brand-badge">Óptica Jaziel</div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1599854897225-0f7b6f9b8d53?auto=format&fit=crop&w=1200&q=60" alt="Persona con lentes">
       </div>
     </section>
 
-    <h2 id="productos" style="margin-top:18px">Productos destacados</h2>
-    <div class="products" id="productList">
-      <!-- cards rendered by JS -->
-    </div>
+    <h2 id="productos">Productos destacados</h2>
+    <div class="products" id="productList"></div>
 
     <h2 id="servicios">Servicios</h2>
     <div class="services">
-      <div class="service reveal">Examen visual profesional y diagnóstico</div>
-      <div class="service reveal">Adaptación de lentes de contacto</div>
-      <div class="service reveal">Reparación y ajuste de monturas</div>
+      <div class="service">Examen visual profesional y diagnóstico completo</div>
+      <div class="service">Adaptación y venta de lentes de contacto</div>
+      <div class="service">Reparación, ajuste y limpieza de monturas</div>
     </div>
 
-    <section id="contacto" style="margin-top:20px">
-      <h2>Contacto</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div>
-          <p style="color:var(--muted)">Escríbenos para reservar tu cita o encargar lentes personalizados.</p>
-          <p><strong>Email:</strong> contacto@optica-jaziel.example<br><strong>Tel:</strong> +51 997 424 072</p>
-          <p><strong>Dirección:</strong> Av. Guillermo de la Fuente N°475 - Comas</p>
-        </div>
-        <div>
-          <h3>Redes y pagos</h3>
-          <p style="color:var(--muted)">Facebook: Grupo Jaziel Visión • TikTok: OpticalJaziel2018</p>
-          <p style="color:var(--muted)">Medios de pago: Visa, Mastercard, Yape y transferencias</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="documentos" style="margin-top:18px">
-      <h2>Documentos y base de datos</h2>
-      <p style="color:var(--muted)">Descarga la ficha técnica del asistente virtual o la base de datos (JSON) que usa el sitio.</p>
-      <div style="display:flex;gap:12px;margin-top:8px">
-        <a id="pdfLink" class="cta" href="#" download="Asistente_virtual_para_la_Optica_Jaziel_final.pdf">Descargar ficha (PDF)</a>
-        <button class="cta" id="downloadJson" style="background:#0ff1e6;color:#003237">Descargar DB (JSON)</button>
-      </div>
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <p>📍 Av. Guillermo de la Fuente N°475 - Comas<br>
+      📞 +51 997 424 072<br>
+      ✉️ contacto@optica-jaziel.example</p>
     </section>
 
     <footer>
-      <div>© Óptica Jaziel</div>
-      <div style="color:var(--muted)">Hecho con ❤️ • Listo para Netlify</div>
+      <div>© 2025 Óptica Jaziel</div>
+      <div>Hecho con 💙 por Jaziel Vision</div>
     </footer>
   </div>
 
-  <!-- chat bubble -->
-  <div class="chat-bubble" id="chatBubble" aria-label="Abrir asistente" title="Abrir asistente">
-    <div class="pulse" aria-hidden="true"></div>
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="z-index:2">
-      <path d="M21 6.5C21 5.39543 20.1046 4.5 19 4.5H5C3.89543 4.5 3 5.39543 3 6.5V17.5C3 18.6046 3.89543 19.5 5 19.5H18L21 22.5V6.5Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
+  <!-- Chat bubble -->
+  <div class="chat-bubble" id="chatBubble" title="Abrir asistente">💬</div>
 
-  <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Asistente Óptica Jaziel">
+  <div class="chat-panel" id="chatPanel">
     <header>
       <div>Asistente Óptica Jaziel</div>
-      <button id="closeChat" style="background:transparent;border:0;color:white;font-size:18px;cursor:pointer">✕</button>
+      <button id="closeChat" style="background:none;border:0;color:white;font-size:18px;cursor:pointer">✕</button>
     </header>
-    <iframe id="botFrame" src="https://studio.botpress.cloud/ab471b82-6e16-4dae-b824-fb200d6b3338/flows/wf-main" title="Asistente Óptica Jaziel" style="width:100%;height:100%;border:0"></iframe>
+    <iframe id="botFrame"
+      src="https://studio.botpress.cloud/ab471b82-6e16-4dae-b824-fb200d6b3338/flows/wf-main"
+      style="width:100%;height:100%;border:0"></iframe>
   </div>
 
   <script>
-    // --- Base de datos embebida
+    // Base de datos
     const DB = {
-      info: {
-        name: "Óptica Jaziel",
-        mission: "Brindar soluciones visuales de calidad a través de productos y servicios ópticos confiables, accesibles y personalizados.",
-        address: "Av. Guillermo de la Fuente N°475 - Comas",
-        whatsapp: "+51997424072",
-        horarios: "Lun-Sab 9:30 - 19:00"
-      },
       products: [
-        {category: "Lunas y Tratamientos", name: "Resinas UV", price: 60, img: "https://images.unsplash.com/photo-1515876305429-24181f2ff0f6?auto=format&fit=crop&w=800&q=60"},
-        {category: "Lunas y Tratamientos", name: "Antirreflex 16", price: 80, img: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=60"},
-        {category: "Lunas y Tratamientos", name: "Blue Defense", price: 120, img: "https://images.unsplash.com/photo-1515876305429-24181f2ff0f6?auto=format&fit=crop&w=800&q=60"},
-        {category: "Lunas y Tratamientos", name: "Dippin Blue", price: 220, img: "https://images.unsplash.com/photo-1588774069165-8d8a6b8a6d1d?auto=format&fit=crop&w=800&q=60"},
-        {category: "Lunas y Tratamientos", name: "Multifocales", price: 280, img: "https://images.unsplash.com/photo-1582719478170-4c90f7f19b13?auto=format&fit=crop&w=800&q=60"},
-        {category: "Monturas", name: "Plástico", price: 20, img: "https://images.unsplash.com/photo-1520975911232-7a26f9f1b6f9?auto=format&fit=crop&w=800&q=60"},
-        {category: "Monturas", name: "Carey", price: 70, img: "https://images.unsplash.com/photo-1519415943484-1a2f0b1a6a4e?auto=format&fit=crop&w=800&q=60"},
-        {category: "Monturas", name: "Acetato", price: 120, img: "https://images.unsplash.com/photo-1519098901909-b1553a8e9b75?auto=format&fit=crop&w=800&q=60"},
-        {category: "Monturas", name: "TR90", price: 170, img: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=60"},
-        {category: "Lentes de Contacto", name: "Cosméticos Freshlook", price: 90, img: "https://images.unsplash.com/photo-1520975911232-7a26f9f1b6f9?auto=format&fit=crop&w=800&q=60"},
-        {category: "Accesorios", name: "Kit completo", price: 18, img: "https://images.unsplash.com/photo-1580910051077-3a6b6d8a7f3e?auto=format&fit=crop&w=800&q=60"}
+        {name:'Lentes Blue Defense', category:'Tratamiento', price:120, img:'https://images.unsplash.com/photo-1515876305429-24181f2ff0f6?auto=format&fit=crop&w=800&q=60'},
+        {name:'Montura Acetato', category:'Monturas', price:140, img:'https://images.unsplash.com/photo-1519098901909-b1553a8e9b75?auto=format&fit=crop&w=800&q=60'},
+        {name:'Lentes de Sol Polarizados', category:'Accesorios', price:180, img:'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=60'}
       ]
     };
 
-    // render
-    function renderProducts(){
-      const container = document.getElementById('productList');
-      container.innerHTML='';
-      DB.products.forEach((p,i)=>{
-        const card = document.createElement('article');
-        card.className='card';
-        card.innerHTML = `
-          <img src='${p.img}' alt='${p.name}' loading='lazy'>
-          <h3>${p.name}</h3>
-          <p style="color:var(--muted)">${p.category}</p>
-          <div style='margin-top:8px'><span class='price'>S/ ${p.price}.00</span></div>`;
-        container.appendChild(card);
-        // reveal animation delay
-        setTimeout(()=>card.classList.add('visible'), 120 * i);
-      })
-    }
-    renderProducts();
-
-    // download JSON
-    document.getElementById('downloadJson').addEventListener('click', ()=>{
-      const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(DB,null,2));
-      const a = document.createElement('a'); a.href=dataStr; a.download='optica_jaziel_db.json'; a.click();
+    const container = document.getElementById('productList');
+    DB.products.forEach((p,i)=>{
+      const card = document.createElement('div');
+      card.className='card';
+      card.innerHTML = `
+        <img src='${p.img}' alt='${p.name}'>
+        <h3>${p.name}</h3>
+        <p>${p.category}</p>
+        <div class='price'>S/ ${p.price}.00</div>`;
+      container.appendChild(card);
+      setTimeout(()=>card.classList.add('visible'), 150*i);
     });
 
-    // enlace PDF (subir assets/Asistente_virtual_para_la_Optica_Jaziel_final.pdf a Netlify)
-    document.getElementById('pdfLink').href = './assets/Asistente_virtual_para_la_Optica_Jaziel_final.pdf';
-
-    // chat interactions
+    // Chat
     const bubble = document.getElementById('chatBubble');
     const panel = document.getElementById('chatPanel');
     const closeChat = document.getElementById('closeChat');
-    bubble.addEventListener('click', ()=>{ panel.style.display='block'; });
-    closeChat.addEventListener('click', ()=>{ panel.style.display='none'; });
-
-    function scrollToProducts(){ document.getElementById('productList').scrollIntoView({behavior:'smooth'}); }
-
-    // try loading external DB (data/db.json)
-    async function tryLoadExternalDB(){
-      try{
-        const res = await fetch('/data/optica_jaziel_db.json');
-        if(res.ok){
-          const ext = await res.json();
-          if(ext.products && ext.products.length){ DB.products = ext.products; renderProducts(); console.log('DB externa cargada'); }
-        }
-      }catch(e){/* ignore */}
-    }
-    tryLoadExternalDB();
-
-    // reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    function onScroll(){
-      reveals.forEach((el,i)=>{
-        const rect = el.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 60){ el.style.opacity=1; el.style.transform='none'; }
-      })
-    }
-    window.addEventListener('scroll', onScroll);
-    onScroll();
+    bubble.onclick = ()=> panel.style.display='block';
+    closeChat.onclick = ()=> panel.style.display='none';
   </script>
 </body>
 </html>
+
