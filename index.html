@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zigzag Prickly Rail</title>
+    <meta property="og:title" content="Zigzag Prickly Rail" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Roboto;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: undefined;
+        text-transform: undefined;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--color-on-surface);
+        background: var(--color-surface);
+
+        fill: var(--color-on-surface);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container1">
+        <navigation-wrapper class="navigation-wrapper">
+          <!--Navigation component-->
+          <div class="navigation-container1">
+            <div class="navigation-container2">
+              <div class="navigation-container3">
+                <style>
+                          @keyframes logoFloat {0%,100% {transform: translateY(0);}
+                  50% {transform: translateY(-5px);}}@keyframes slideInMobile {to {opacity: 1;
+                  transform: translateX(0);}}@keyframes fadeInUp {to {opacity: 1;}}
+                </style>
+              </div>
+            </div>
+            <div class="navigation-container4">
+              <div class="navigation-container5">
+                <style>
+                  @media (prefers-reduced-motion: reduce) {
+                  .navigation__logo-icon {
+                    animation: none;
+                  }
+                  .navigation__link::before, .navigation__social-link, .navigation__mobile, .navigation__mobile-link, .navigation__mobile-cta, .navigation__mobile-social {
+                    animation: none;
+                    transition: none;
+                  }
+                  }
+                </style>
+              </div>
+            </div>
+            <div class="navigation-container6">
+              <div class="navigation-container7">
+                <script defer="" data-name="navigation">
+                  (function(){
+                    const navigationToggle = document.getElementById('navigationToggle')
+                    const navigationMobile = document.getElementById('navigationMobile')
+                    const navigationMobileLinks = navigationMobile.querySelectorAll(
+                      '.navigation__mobile-link'
+                    )
+
+                    // Toggle mobile menu
+                    navigationToggle.addEventListener('click', () => {
+                      const isExpanded = navigationToggle.getAttribute('aria-expanded') === 'true'
+                      navigationToggle.setAttribute('aria-expanded', !isExpanded)
+                      navigationMobile.classList.toggle('navigation__mobile--active')
+
+                      // Prevent body scroll when menu is open
+                      if (!isExpanded) {
+                        document.body.style.overflow = 'hidden'
+                      } else {
+                        document.body.style.overflow = ''
+                      }
+                    })
+
+                    // Close mobile menu when clicking a link
+                    navigationMobileLinks.forEach((link) => {
+                      link.addEventListener('click', () => {
+                        navigationToggle.setAttribute('aria-expanded', 'false')
+                        navigationMobile.classList.remove('navigation__mobile--active')
+                        document.body.style.overflow = ''
+                      })
+                    })
+
+                    // Close mobile menu on escape key
+                    document.addEventListener('keydown', (e) => {
+                      if (
+                        e.key === 'Escape' &&
+                        navigationMobile.classList.contains('navigation__mobile--active')
+                      ) {
+                        navigationToggle.setAttribute('aria-expanded', 'false')
+                        navigationMobile.classList.remove('navigation__mobile--active')
+                        document.body.style.overflow = ''
+                        navigationToggle.focus()
+                      }
+                    })
+
+                    // Add shadow on scroll
+                    let lastScrollTop = 0
+                    window.addEventListener(
+                      'scroll',
+                      () => {
+                        const navigation = document.getElementById('navigation')
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+                        if (scrollTop > 50) {
+                          navigation.style.boxShadow =
+                            '0 6px 30px color-mix(in srgb, var(--color-primary) 20%, transparent)'
+                        } else {
+                          navigation.style.boxShadow =
+                            '0 4px 20px color-mix(in srgb, var(--color-primary) 12%, transparent)'
+                        }
+
+                        lastScrollTop = scrollTop
+                      },
+                      { passive: true }
+                    )
+                  })()
+                </script>
+              </div>
+            </div>
+            <nav id="navigation" class="navigation">
+              <div class="navigation__container">
+                <a href="#">
+                  <div
+                    aria-label="Optica Jaziel - Inicio"
+                    class="navigation__logo"
+                  >
+                    <span class="navigation__logo-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <circle cx="6" cy="15" r="4"></circle>
+                          <circle cx="18" cy="15" r="4"></circle>
+                          <path
+                            d="M14 15a2 2 0 0 0-2-2a2 2 0 0 0-2 2m-7.5-2L5 7c.7-1.3 1.4-2 3-2m13.5 8L19 7c-.7-1.3-1.5-2-3-2"
+                          ></path>
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="navigation__logo-text">
+                      <span class="navigation-navigationlogo-title">
+                        Optica Jaziel
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <div class="navigation__links">
+                  <a href="#colecciones">
+                    <div class="navigation__link"><span>Colecciones</span></div>
+                  </a>
+                  <a href="#lentes-sol">
+                    <div class="navigation__link">
+                      <span>Lentes de Sol</span>
+                    </div>
+                  </a>
+                  <a href="#lentes-vista">
+                    <div class="navigation__link">
+                      <span>Lentes de Vista</span>
+                    </div>
+                  </a>
+                  <a href="#examenes">
+                    <div class="navigation__link"><span>Exámenes</span></div>
+                  </a>
+                  <a href="#nosotros">
+                    <div class="navigation__link"><span>Nosotros</span></div>
+                  </a>
+                </div>
+                <div class="navigation__actions">
+                  <div class="navigation__social">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <div
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        class="navigation__social-link"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <div
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        class="navigation__social-link"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <rect
+                              width="20"
+                              height="20"
+                              x="2"
+                              y="2"
+                              rx="5"
+                              ry="5"
+                            ></rect>
+                            <path
+                              d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <a href="#agendar">
+                    <div class="navigation__cta btn btn-primary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path d="M8 2v4m8-4v4"></path>
+                          <rect
+                            width="18"
+                            height="18"
+                            x="3"
+                            y="4"
+                            rx="2"
+                          ></rect>
+                          <path d="M3 10h18"></path>
+                        </g>
+                      </svg>
+                      <span>Agendar Cita</span>
+                    </div>
+                  </a>
+                </div>
+                <button
+                  id="navigationToggle"
+                  aria-label="Abrir menú"
+                  aria-expanded="false"
+                  class="navigation__toggle"
+                >
+                  <span class="navigation-navigationtoggle-icon1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 5h16M4 12h16M4 19h16"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="navigation-navigationtoggle-icon2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M18 6L6 18M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div id="navigationMobile" class="navigation__mobile">
+                <div class="navigation__mobile-content">
+                  <div class="navigation__mobile-links">
+                    <a href="#colecciones">
+                      <div class="navigation__mobile-link">
+                        <span>Colecciones</span>
+                      </div>
+                    </a>
+                    <a href="#lentes-sol">
+                      <div class="navigation__mobile-link">
+                        <span>Lentes de Sol</span>
+                      </div>
+                    </a>
+                    <a href="#lentes-vista">
+                      <div class="navigation__mobile-link">
+                        <span>Lentes de Vista</span>
+                      </div>
+                    </a>
+                    <a href="#examenes">
+                      <div class="navigation__mobile-link">
+                        <span>Exámenes</span>
+                      </div>
+                    </a>
+                    <a href="#nosotros">
+                      <div class="navigation__mobile-link">
+                        <span>Nosotros</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="navigation__mobile-cta">
+                    <a href="#agendar">
+                      <div class="btn btn-primary btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path d="M8 2v4m8-4v4"></path>
+                            <rect
+                              width="18"
+                              height="18"
+                              x="3"
+                              y="4"
+                              rx="2"
+                            ></rect>
+                            <path d="M3 10h18"></path>
+                          </g>
+                        </svg>
+                        <span>Agendar Cita</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="navigation__mobile-social">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <div
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        class="navigation__mobile-social-link"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <div
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        class="navigation__mobile-social-link"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <rect
+                              width="20"
+                              height="20"
+                              x="2"
+                              y="2"
+                              rx="5"
+                              ry="5"
+                            ></rect>
+                            <path
+                              d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </navigation-wrapper>
+        <div class="home-container2">
+          <div class="home-container3">
+            <style>
+                      @keyframes logoFloat {0%,100% {transform: translateY(0) rotate(0deg);}
+              50% {transform: translateY(-15px) rotate(5deg);}}@keyframes titleBounce {0% {transform: translateY(40px) scale(0.8);
+              opacity: 0;}
+              60% {transform: translateY(-10px) scale(1.05);}
+              100% {transform: translateY(0) scale(1);
+              opacity: 1;}}@keyframes fadeSlideUp {from {transform: translateY(30px);
+              opacity: 0;}
+              to {transform: translateY(0);
+              opacity: 1;}}@keyframes glassesFloat {0%,100% {transform: translateY(0) rotate(-2deg);}
+              50% {transform: translateY(-10px) rotate(2deg);}}@keyframes socialBounce {from {transform: translateX(100px) rotate(45deg);
+              opacity: 0;}
+              to {transform: translateX(0) rotate(0);
+              opacity: 1;}}@keyframes pulseGlow {0%,100% {transform: scale(1);
+              opacity: 0.5;}
+              50% {transform: scale(1.2);
+              opacity: 0.8;}}@keyframes iconBounce {0%,100% {transform: translateY(0) rotate(0deg);}
+              50% {transform: translateY(-10px) rotate(5deg);}}@keyframes rotate {from {transform: rotate(0deg);}
+              to {transform: rotate(360deg);}}
+            </style>
+          </div>
+        </div>
+        <div class="home-container4">
+          <div class="home-container5">
+            <script defer="" data-name="optica-jaziel-interactions">
+              (function(){
+                // Floating Glasses that Follow Scroll
+                const floatingGlasses = document.getElementById('floating-glasses')
+                let glassesPosition = { x: window.innerWidth / 2, y: 100 }
+                let targetPosition = { x: window.innerWidth / 2, y: 100 }
+                let scrollProgress = 0
+
+                // Update glasses position based on scroll
+                function updateGlassesOnScroll() {
+                  const scrollY = window.scrollY
+                  const windowHeight = window.innerHeight
+                  const documentHeight = document.documentElement.scrollHeight
+
+                  // Calculate scroll progress (0 to 1)
+                  scrollProgress = scrollY / (documentHeight - windowHeight)
+
+                  // Move glasses vertically based on scroll
+                  targetPosition.y = 100 + scrollY * 0.3
+
+                  // Add horizontal wave motion
+                  targetPosition.x =
+                    window.innerWidth / 2 + Math.sin(scrollProgress * Math.PI * 4) * 150
+                }
+
+                // Smooth animation loop for glasses movement
+                function animateGlasses() {
+                  // Smooth interpolation
+                  glassesPosition.x += (targetPosition.x - glassesPosition.x) * 0.1
+                  glassesPosition.y += (targetPosition.y - glassesPosition.y) * 0.1
+
+                  // Apply transform
+                  floatingGlasses.style.transform = `translate(${glassesPosition.x - 75}px, ${
+                    glassesPosition.y
+                  }px)`
+
+                  requestAnimationFrame(animateGlasses)
+                }
+
+                // Mouse movement interaction
+                function handleMouseMove(e) {
+                  const mouseX = e.clientX
+                  const mouseY = e.clientY + window.scrollY
+
+                  // Make glasses slightly follow mouse
+                  targetPosition.x += (mouseX - targetPosition.x) * 0.05
+                  targetPosition.y += (mouseY - targetPosition.y) * 0.03
+                }
+
+                // Initialize
+                window.addEventListener('scroll', updateGlassesOnScroll, { passive: true })
+                window.addEventListener('mousemove', handleMouseMove, { passive: true })
+                animateGlasses()
+
+                // Appointment Form Handling
+                const appointmentForm = document.getElementById('appointment-form')
+
+                appointmentForm.addEventListener('submit', function (e) {
+                  e.preventDefault()
+
+                  const formData = {
+                    nombre: document.getElementById('nombre').value,
+                    apellidos: document.getElementById('apellidos').value,
+                    dni: document.getElementById('dni').value,
+                    correo: document.getElementById('correo').value,
+                    fecha: document.getElementById('fecha').value,
+                    hora: document.getElementById('hora').value,
+                  }
+
+                  // Store in localStorage (simulating database)
+                  let appointments = JSON.parse(
+                    localStorage.getItem('jazielAppointments') || '[]'
+                  )
+                  appointments.push({
+                    ...formData,
+                    id: Date.now(),
+                    createdAt: new Date().toISOString(),
+                  })
+                  localStorage.setItem('jazielAppointments', JSON.stringify(appointments))
+
+                  // Success feedback
+                  const submitButton = appointmentForm.querySelector('button[type='submit']')
+                  const originalText = submitButton.textContent
+                  submitButton.textContent = '¡Cita Confirmada! ✓'
+                  submitButton.style.background = 'var(--color-accent)'
+
+                  setTimeout(() => {
+                    submitButton.textContent = originalText
+                    submitButton.style.background = ''
+                    appointmentForm.reset()
+                  }, 3000)
+
+                  console.log('Cita guardada:', formData)
+                })
+
+                // Set minimum date to today
+                const fechaInput = document.getElementById('fecha')
+                const today = new Date().toISOString().split('T')[0]
+                fechaInput.setAttribute('min', today)
+
+                // Intersection Observer for scroll animations
+                const observerOptions = {
+                  threshold: 0.1,
+                  rootMargin: '0px 0px -100px 0px',
+                }
+
+                const observer = new IntersectionObserver((entries) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      entry.target.style.animation = 'fadeSlideUp 0.8s ease-out forwards'
+                      observer.unobserve(entry.target)
+                    }
+                  })
+                }, observerOptions)
+
+                // Observe feature cards, gallery items, and review cards
+                document
+                  .querySelectorAll('.feature-card, .gallery-item, .review-card')
+                  .forEach((el) => {
+                    el.style.opacity = '0'
+                    observer.observe(el)
+                  })
+
+                // CTA buttons scroll to appointment
+                const ctaButtons = document.querySelectorAll(
+                  '.hero-cta-group .btn-primary, .cta-buttons .btn-primary'
+                )
+                ctaButtons.forEach((button) => {
+                  button.addEventListener('click', () => {
+                    document.getElementById('appointment-section').scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
+                  })
+                })
+
+                // Gallery item click to expand (simple effect)
+                document.querySelectorAll('.gallery-item').forEach((item) => {
+                  item.addEventListener('click', () => {
+                    item.style.transition = 'transform 0.3s ease'
+                    item.style.transform =
+                      item.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)'
+                    item.style.zIndex = item.style.zIndex === '100' ? '10' : '100'
+
+                    setTimeout(() => {
+                      item.style.transform = 'scale(1)'
+                      item.style.zIndex = '10'
+                    }, 2000)
+                  })
+                })
+
+                // Console log for stored appointments (admin view simulation)
+                console.log('Óptica Jaziel - Sistema de Citas Activo')
+                console.log(
+                  'Para ver las citas guardadas:',
+                  'localStorage.getItem('jazielAppointments')'
+                )
+              })()
+            </script>
+          </div>
+        </div>
+        <section id="hero-section" class="hero-jaziel">
+          <video
+            autoplay="true"
+            muted="true"
+            loop="true"
+            playsinline="true"
+            src="https://videos.pexels.com/video-files/9772517/9772517-hd_1080_1920_25fps.mp4"
+            class="hero-video"
+          ></video>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="hero-logo-wrapper">
+              <div class="logo-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  class="logo-icon"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M2.062 12.348a1 1 0 0 1 0-.696a10.75 10.75 0 0 1 19.876 0a1 1 0 0 1 0 .696a10.75 10.75 0 0 1-19.876 0"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <h1 class="hero-title">Óptica Jaziel</h1>
+            <p class="hero-subtitle">
+              Tu visión, nuestra pasión. Descubre el mundo con claridad y estilo
+            </p>
+            <div class="hero-cta-group">
+              <button class="btn btn-primary btn-lg">Reserva tu Cita</button>
+              <button class="btn btn-lg btn-outline">
+                Explora Colecciones
+              </button>
+            </div>
+          </div>
+          <div id="floating-glasses" class="floating-glasses">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 200 80"
+              class="glasses-svg"
+            >
+              <defs>
+                <linearGradient
+                  id="glassGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" class="home-icon15"></stop>
+                  <stop offset="100%" class="home-icon16"></stop>
+                </linearGradient>
+              </defs>
+              <ellipse
+                cx="50"
+                cy="40"
+                rx="30"
+                ry="25"
+                fill="none"
+                stroke="url(#glassGradient)"
+                stroke-width="3"
+              ></ellipse>
+              <ellipse
+                cx="50"
+                cy="40"
+                rx="25"
+                ry="20"
+                fill="url(#glassGradient)"
+                opacity="0.1"
+              ></ellipse>
+              <path
+                d="M 80 40 Q 100 35 120 40"
+                fill="none"
+                stroke="url(#glassGradient)"
+                stroke-width="3"
+              ></path>
+              <ellipse
+                cx="150"
+                cy="40"
+                rx="30"
+                ry="25"
+                fill="none"
+                stroke="url(#glassGradient)"
+                stroke-width="3"
+              ></ellipse>
+              <ellipse
+                cx="150"
+                cy="40"
+                rx="25"
+                ry="20"
+                fill="url(#glassGradient)"
+                opacity="0.1"
+              ></ellipse>
+              <path
+                d="M 20 40 L 5 38"
+                fill="none"
+                stroke="url(#glassGradient)"
+                stroke-width="2.5"
+              ></path>
+              <path
+                d="M 180 40 L 195 38"
+                fill="none"
+                stroke="url(#glassGradient)"
+                stroke-width="2.5"
+              ></path>
+              <circle
+                cx="40"
+                cy="30"
+                r="2"
+                fill="currentColor"
+                opacity="0.6"
+              ></circle>
+              <circle
+                cx="160"
+                cy="30"
+                r="2"
+                fill="currentColor"
+                opacity="0.6"
+              ></circle>
+            </svg>
+          </div>
+        </section>
+        <div id="social-bar" class="social-media-bar">
+          <div class="social-item">
+            <a href="#">
+              <div aria-label="Facebook" class="social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <div aria-label="Instagram" class="social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <rect
+                      width="20"
+                      height="20"
+                      x="2"
+                      y="2"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <div aria-label="TikTok" class="social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 7.917v4.034A9.95 9.95 0 0 1 16 10v4.5a6.5 6.5 0 1 1-8-6.326V12.5a2.5 2.5 0 1 0 4 2V3h4.083A6.005 6.005 0 0 0 21 7.917"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        <section id="features-section" class="features-jaziel">
+          <div class="features-container">
+            <div class="section-header">
+              <h2 class="section-title">¿Por Qué Elegir Óptica Jaziel?</h2>
+              <p class="section-subtitle">
+                Experiencia, calidad y un servicio personalizado que marca la
+                diferencia
+              </p>
+            </div>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    class="feature-icon"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M2.062 12.348a1 1 0 0 1 0-.696a10.75 10.75 0 0 1 19.876 0a1 1 0 0 1 0 .696a10.75 10.75 0 0 1-19.876 0"
+                      ></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </g>
+                  </svg>
+                </div>
+                <h3 class="feature-title">Examen Visual Completo</h3>
+                <p class="feature-description">
+                  Tecnología de última generación para cuidar tu salud visual
+                  con precisión y profesionalismo
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    class="feature-icon"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594zM20 2v4m2-2h-4"
+                      ></path>
+                      <circle cx="4" cy="20" r="2"></circle>
+                    </g>
+                  </svg>
+                </div>
+                <h3 class="feature-title">Monturas de Diseño</h3>
+                <p class="feature-description">
+                  Colecciones exclusivas que combinan estilo, comodidad y las
+                  últimas tendencias de moda
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    class="feature-icon"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="feature-title">Garantía de Calidad</h3>
+                <p class="feature-description">
+                  Lentes certificados con protección UV y tratamientos
+                  especiales para tu tranquilidad
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    class="feature-icon"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="m15.477 12.89l1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                      ></path>
+                      <circle cx="12" cy="8" r="6"></circle>
+                    </g>
+                  </svg>
+                </div>
+                <h3 class="feature-title">Servicio Personalizado</h3>
+                <p class="feature-description">
+                  Asesoramiento experto para encontrar la montura perfecta que
+                  refleje tu personalidad
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="gallery-section" class="gallery-jaziel">
+          <div class="gallery-container">
+            <div class="section-header">
+              <h2 class="section-title">Nuestras Colecciones</h2>
+              <p class="section-subtitle">
+                Descubre estilos únicos que transforman tu mirada
+              </p>
+            </div>
+            <div class="gallery-grid">
+              <div class="gallery-item gallery-item-large">
+                <img
+                  src="https://images.pexels.com/photos/5202060/pexels-photo-5202060.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                  alt="Colección de lentes elegantes"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Colección Premium</h3>
+                  <p class="gallery-text">Diseños exclusivos</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="https://images.pexels.com/photos/7562313/pexels-photo-7562313.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                  alt="Hombre con lentes modernos"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Estilo Casual</h3>
+                  <p class="gallery-text">Para el día a día</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="https://images.pexels.com/photos/7983355/pexels-photo-7983355.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                  alt="Mujer con lentes elegantes"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Línea Femenina</h3>
+                  <p class="gallery-text">Elegancia y sofisticación</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="https://images.pexels.com/photos/7357978/pexels-photo-7357978.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                  alt="Variedad de monturas"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Colores Vibrantes</h3>
+                  <p class="gallery-text">Expresa tu personalidad</p>
+                </div>
+              </div>
+              <div class="gallery-item gallery-item-tall">
+                <img
+                  src="https://images.pexels.com/photos/15077030/pexels-photo-15077030.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                  alt="Mujer joven con lentes"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Tendencias 2025</h3>
+                  <p class="gallery-text">Lo más nuevo en moda</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="https://images.pexels.com/photos/5752270/pexels-photo-5752270.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                  alt="Display de lentes en óptica"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Gran Variedad</h3>
+                  <p class="gallery-text">Más de 500 modelos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="appointment-section" class="appointment-jaziel">
+          <div class="appointment-container">
+            <div class="appointment-content">
+              <div class="appointment-info">
+                <div class="appointment-icon-large">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="80"
+                    height="80"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path d="M8 2v4m8-4v4"></path>
+                      <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                      <path d="M3 10h18"></path>
+                    </g>
+                  </svg>
+                </div>
+                <h2 class="section-title">Reserva tu Cita</h2>
+                <p class="section-subtitle">
+                  Agenda tu examen visual y encuentra los lentes perfectos para
+                  ti. ¡Te esperamos!
+                </p>
+                <ul class="appointment-benefits">
+                  <li class="benefit-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="benefit-icon"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m5 12l5 5L20 7"
+                      ></path>
+                    </svg>
+                    <span>Atención personalizada</span>
+                  </li>
+                  <li class="benefit-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="benefit-icon"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m5 12l5 5L20 7"
+                      ></path>
+                    </svg>
+                    <span>Sin tiempos de espera</span>
+                  </li>
+                  <li class="benefit-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="benefit-icon"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m5 12l5 5L20 7"
+                      ></path>
+                    </svg>
+                    <span>Asesoramiento experto</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="appointment-form-wrapper">
+                <form id="appointment-form" class="appointment-form">
+                  <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Tu nombre completo"
+                      required="true"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <input
+                      type="text"
+                      id="apellidos"
+                      name="apellidos"
+                      placeholder="Tus apellidos"
+                      required="true"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input
+                      type="text"
+                      id="dni"
+                      name="dni"
+                      placeholder="Tu número de DNI"
+                      required="true"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="correo" class="form-label">
+                      Correo Electrónico
+                    </label>
+                    <input
+                      type="email"
+                      id="correo"
+                      name="correo"
+                      placeholder="tu@correo.com"
+                      required="true"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="fecha" class="form-label">Fecha de Cita</label>
+                    <input
+                      type="date"
+                      id="fecha"
+                      name="fecha"
+                      required="true"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="hora" class="form-label">Hora de Cita</label>
+                    <select
+                      id="hora"
+                      name="hora"
+                      required="true"
+                      class="form-input"
+                    >
+                      <option value="true">Selecciona una hora</option>
+                      <option value="09:00">09:00 AM</option>
+                      <option value="10:00">10:00 AM</option>
+                      <option value="11:00">11:00 AM</option>
+                      <option value="12:00">12:00 PM</option>
+                      <option value="14:00">02:00 PM</option>
+                      <option value="15:00">03:00 PM</option>
+                      <option value="16:00">04:00 PM</option>
+                      <option value="17:00">05:00 PM</option>
+                      <option value="18:00">06:00 PM</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-xl">
+                    Confirmar Cita
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="reviews-section" class="reviews-jaziel">
+          <div class="reviews-container">
+            <div class="section-header">
+              <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+              <p class="section-subtitle">
+                Testimonios reales de personas que confían en nosotros
+              </p>
+            </div>
+            <div class="reviews-grid">
+              <div class="review-card">
+                <div class="review-stars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="review-text">
+                  "Excelente servicio y atención. Encontré los lentes perfectos
+                  para mí y el personal fue súper amable. ¡100% recomendado!"
+                </p>
+                <div class="review-author">
+                  <img
+                    src="https://images.pexels.com/photos/6583360/pexels-photo-6583360.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                    alt="María González"
+                    class="author-avatar"
+                  />
+                  <div class="author-info">
+                    <h4 class="author-name">María González</h4>
+                    <p class="author-location">Lima, Perú</p>
+                  </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="review-stars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="review-text">
+                  "La calidad de los lentes es excepcional y los precios muy
+                  justos. El examen visual fue muy completo y profesional."
+                </p>
+                <div class="review-author">
+                  <img
+                    src="https://images.pexels.com/photos/7562313/pexels-photo-7562313.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                    alt="Carlos Rodríguez"
+                    class="author-avatar"
+                  />
+                  <div class="author-info">
+                    <h4 class="author-name">Carlos Rodríguez</h4>
+                    <p class="author-location">Arequipa, Perú</p>
+                  </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="review-stars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path></svg
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="star-icon filled"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="review-text">
+                  "Me encantó la variedad de monturas y el trato personalizado.
+                  Sin duda volveré para mis próximos lentes."
+                </p>
+                <div class="review-author">
+                  <img
+                    src="https://images.pexels.com/photos/8287651/pexels-photo-8287651.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                    alt="Ana Martínez"
+                    class="author-avatar"
+                  />
+                  <div class="author-info">
+                    <h4 class="author-name">Ana Martínez</h4>
+                    <p class="author-location">Cusco, Perú</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="cta-section" class="cta-jaziel">
+          <div class="cta-container">
+            <div class="cta-content">
+              <h2 class="section-title">
+                ¿Listo para Ver el Mundo con Claridad?
+              </h2>
+              <p class="section-subtitle">
+                Visítanos hoy y descubre cómo podemos mejorar tu visión y tu
+                estilo
+              </p>
+              <div class="cta-buttons">
+                <button class="btn btn-primary btn-xl">
+                  Agendar Cita Ahora
+                </button>
+                <button class="btn btn-outline btn-xl">
+                  Contactar por WhatsApp
+                </button>
+              </div>
+            </div>
+            <div class="cta-decorative">
+              <img
+                src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940"
+                alt="Lentes modernos Óptica Jaziel"
+                class="cta-image"
+              />
+            </div>
+          </div>
+        </section>
+        <footer-wrapper class="footer-wrapper">
+          <!--Footer component-->
+          <div class="footer-container1">
+            <div class="footer-container2">
+              <div class="footer-container3">
+                <style>
+                          @keyframes footerFloatBounce {0%,100% {transform: translateY(0) scale(1);}
+                  25% {transform: translateY(-20px) scale(1.05);}
+                  50% {transform: translateY(0) scale(0.95);}
+                  75% {transform: translateY(-10px) scale(1.02);}}@keyframes footerLogoBounce {0%,100% {transform: rotate(5deg) scale(1.1);}
+                  50% {transform: rotate(5deg) scale(1.15);}}@keyframes footerSocialBounce {0%,100% {transform: translateY(-4px) scale(1.1);}
+                  50% {transform: translateY(-8px) scale(1.15);}}@keyframes footerNewsletterFloat {0%,100% {transform: translate(0, 0) rotate(0deg);}
+                  50% {transform: translate(-30px, 30px) rotate(180deg);}}@keyframes footerHeartBeat {0%,100% {transform: scale(1);}
+                  10%,30% {transform: scale(1.2);}
+                  20%,40% {transform: scale(1);}}
+                </style>
+              </div>
+            </div>
+            <div class="footer-container4">
+              <div class="footer-container5">
+                <style>
+                  a.footer-contact-value:hover {
+                    color: var(--color-primary);
+                  }
+                </style>
+              </div>
+            </div>
+            <div class="footer-container6">
+              <div class="footer-container7">
+                <script defer="" data-name="footer-optica-jaziel">
+                  (function(){
+                    // Newsletter form submission handler
+                    const newsletterForm = document.querySelector('.footer-newsletter-form')
+                    const newsletterInput = document.querySelector('.footer-newsletter-input')
+                    const newsletterButton = document.querySelector('.footer-newsletter-button')
+
+                    if (newsletterForm) {
+                      newsletterForm.addEventListener('submit', function (e) {
+                        e.preventDefault()
+
+                        const email = newsletterInput.value.trim()
+
+                        if (email) {
+                          // Store original button text
+                          const originalText = newsletterButton.textContent
+
+                          // Update button to show success
+                          newsletterButton.textContent = '¡Suscrito!'
+                          newsletterButton.style.background = 'var(--color-accent)'
+
+                          // Add success animation
+                          newsletterButton.style.transform = 'scale(1.1)'
+
+                          // Clear input
+                          newsletterInput.value = ''
+
+                          // Reset button after 3 seconds
+                          setTimeout(function () {
+                            newsletterButton.textContent = originalText
+                            newsletterButton.style.transform = 'scale(1)'
+                          }, 3000)
+                        }
+                      })
+                    }
+
+                    // Add smooth hover effect to footer links
+                    const footerLinks = document.querySelectorAll('.footer-link')
+
+                    footerLinks.forEach(function (link) {
+                      link.addEventListener('mouseenter', function () {
+                        this.style.transition = 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)'
+                      })
+                    })
+
+                    // Parallax effect for floating shapes
+                    const floatingShapes = document.querySelectorAll('.footer-shape')
+
+                    if (floatingShapes.length > 0) {
+                      window.addEventListener('scroll', function () {
+                        const scrolled = window.pageYOffset
+                        const footerOffset = document.getElementById('footer-optica').offsetTop
+                        const windowHeight = window.innerHeight
+
+                        if (scrolled + windowHeight > footerOffset) {
+                          const relativeScroll = (scrolled + windowHeight - footerOffset) * 0.5
+
+                          floatingShapes.forEach(function (shape, index) {
+                            const speed = (index + 1) * 0.3
+                            const yOffset = relativeScroll * speed
+                            shape.style.transform = 'translateY(' + yOffset + 'px)'
+                          })
+                        }
+                      })
+                    }
+
+                    // Add bounce animation on social link click
+                    const socialLinks = document.querySelectorAll('.footer-social-link')
+
+                    socialLinks.forEach(function (link) {
+                      link.addEventListener('click', function (e) {
+                        // Allow navigation but add visual feedback
+                        this.style.animation = 'none'
+                        setTimeout(function () {
+                          link.style.animation = ''
+                        }, 10)
+                      })
+                    })
+
+                    // Animate contact items on scroll into view
+                    const observerOptions = {
+                      threshold: 0.2,
+                      rootMargin: '0px',
+                    }
+
+                    const contactObserver = new IntersectionObserver(function (entries) {
+                      entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                          entry.target.style.opacity = '1'
+                          entry.target.style.transform = 'translateY(0)'
+                        }
+                      })
+                    }, observerOptions)
+
+                    const contactItems = document.querySelectorAll('.footer-contact-item')
+
+                    contactItems.forEach(function (item, index) {
+                      item.style.opacity = '0'
+                      item.style.transform = 'translateY(20px)'
+                      item.style.transition =
+                        'opacity 0.6s ease-out ' +
+                        index * 0.1 +
+                        's, transform 0.6s ease-out ' +
+                        index * 0.1 +
+                        's'
+                      contactObserver.observe(item)
+                    })
+                  })()
+                </script>
+              </div>
+            </div>
+            <footer id="footer-optica" class="footer-main">
+              <div class="footer-container">
+                <div aria-hidden="true" class="footer-floating-shapes">
+                  <div class="footer-shape footer-shape-1"></div>
+                  <div class="footer-shape footer-shape-2"></div>
+                  <div class="footer-shape footer-shape-3"></div>
+                </div>
+                <div class="footer-content-grid">
+                  <div class="footer-brand-section">
+                    <div class="footer-logo-wrapper">
+                      <div class="footer-logo-circle">
+                        <span class="footer-logo-text">OJ</span>
+                      </div>
+                      <h2 class="footer-brand-name">Optica Jaziel</h2>
+                    </div>
+                    <p class="footer-brand-tagline">
+                      Tu visión es nuestra pasión. Encuentra el estilo perfecto
+                      para ver el mundo con claridad.
+                    </p>
+                    <div class="footer-social-section">
+                      <p class="footer-social-title">Síguenos</p>
+                      <div class="footer-social-links">
+                        <a href="#">
+                          <div aria-label="Facebook" class="footer-social-link">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div
+                            aria-label="Instagram"
+                            class="footer-social-link"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <rect
+                                  width="20"
+                                  height="20"
+                                  x="2"
+                                  y="2"
+                                  rx="5"
+                                  ry="5"
+                                ></rect>
+                                <path
+                                  d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                                ></path>
+                              </g>
+                            </svg>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div aria-label="TikTok" class="footer-social-link">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 7.917v4.034A9.95 9.95 0 0 1 16 10v4.5a6.5 6.5 0 1 1-8-6.326V12.5a2.5 2.5 0 1 0 4 2V3h4.083A6.005 6.005 0 0 0 21 7.917"
+                              ></path>
+                            </svg>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-links-section">
+                    <h3 class="footer-section-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links-list">
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link"><span>Inicio</span></div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link"><span>Catálogo</span></div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Reservar Cita</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link"><span>Reseñas</span></div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link"><span>Contacto</span></div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer-services-section">
+                    <h3 class="footer-section-title">Servicios</h3>
+                    <ul class="footer-links-list">
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Examen de Vista</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Lentes de Sol</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Lentes Recetados</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Monturas Premium</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="footer-link-item">
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Reparaciones</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer-contact-section">
+                    <h3 class="footer-section-title">Contáctanos</h3>
+                    <div class="footer-contact-info">
+                      <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="footer-contact-text">
+                          <span class="footer-contact-label">Teléfono</span>
+                          <a href="tel:+123456789">
+                            <div class="footer-contact-value">
+                              <span>+1 234 567 89</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
+                              ></path>
+                              <rect
+                                width="20"
+                                height="16"
+                                x="2"
+                                y="4"
+                                rx="2"
+                              ></rect>
+                            </g>
+                          </svg>
+                        </div>
+                        <div class="footer-contact-text">
+                          <span class="footer-contact-label">Email</span>
+                          <a href="mailto:info@opticajaziel.com?subject=">
+                            <div class="footer-contact-value">
+                              <span>info@opticajaziel.com</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M17.97 9.304A8 8 0 0 0 2 10c0 4.69 4.887 9.562 7.022 11.468m12.356-4.842a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"
+                              ></path>
+                              <circle cx="10" cy="10" r="3"></circle>
+                            </g>
+                          </svg>
+                        </div>
+                        <div class="footer-contact-text">
+                          <span class="footer-contact-label">Dirección</span>
+                          <span class="footer-contact-value">
+                            Av. Principal 123, Ciudad
+                          </span>
+                        </div>
+                      </div>
+                      <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path d="M12 6v6l4 2"></path>
+                              <circle cx="12" cy="12" r="10"></circle>
+                            </g>
+                          </svg>
+                        </div>
+                        <div class="footer-contact-text">
+                          <span class="footer-contact-label">Horario</span>
+                          <span class="footer-contact-value">
+                            Lun - Sáb: 9:00 - 20:00
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-newsletter">
+                  <div class="footer-newsletter-content">
+                    <div class="footer-newsletter-text">
+                      <h3 class="footer-newsletter-title">
+                        ¡Mantente al día con nuestras ofertas!
+                      </h3>
+                      <p class="footer-newsletter-subtitle">
+                        Suscríbete y recibe descuentos exclusivos en tu inbox
+                      </p>
+                    </div>
+                    <form class="footer-newsletter-form">
+                      <input
+                        type="email"
+                        placeholder="Tu correo electrónico"
+                        aria-label="Email para newsletter"
+                        required="true"
+                        class="footer-newsletter-input"
+                      />
+                      <button
+                        type="submit"
+                        class="footer-newsletter-button btn btn-primary"
+                      >
+                        Suscribirme
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                  <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                      <span>
+                        &amp;copy; 2025 Optica Jaziel. Todos los derechos
+                        reservados.
+                      </span>
+                    </p>
+                    <div class="footer-bottom-links">
+                      <a href="#">
+                        <div class="footer-bottom-link">
+                          <span>Política de Privacidad</span>
+                        </div>
+                      </a>
+                      <span aria-hidden="true" class="footer-divider">•</span>
+                      <a href="#">
+                        <div class="footer-bottom-link">
+                          <span>Términos de Uso</span>
+                        </div>
+                      </a>
+                      <span aria-hidden="true" class="footer-divider">•</span>
+                      <a href="#">
+                        <div class="footer-bottom-link">
+                          <span>Cookies</span>
+                        </div>
+                      </a>
+                    </div>
+                    <p class="footer-made-with">
+                      <span>Hecho con</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        class="footer-footer-heart-icon"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676a.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                        ></path>
+                      </svg>
+                      <span>para tus ojos</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </footer-wrapper>
+        <a href="https://play.teleporthq.io/signup">
+          <div aria-label="Sign up to TeleportHQ" class="home-container6">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 19 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="home-icon67"
+            >
+              <path
+                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
+                fill="#B23ADE"
+              ></path>
+              <path
+                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
+                fill="#FF5C5C"
+              ></path>
+              <path
+                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
+                fill="#2874DE"
+              ></path>
+            </svg>
+            <span class="home-text4">Built in TeleportHQ</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

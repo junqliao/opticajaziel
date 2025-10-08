@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zigzag Prickly Rail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Roboto;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: undefined;
+        text-transform: undefined;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--color-on-surface);
+        background: var(--color-surface);
+
+        fill: var(--color-on-surface);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="../style.css" />
+    <div>
+      <link href="./navigation.css" rel="stylesheet" />
+      <div class="navigation-container1">
+        <div class="navigation-container2">
+          <div class="navigation-container3">
+            <style>
+                      @keyframes logoFloat {0%,100% {transform: translateY(0);}
+              50% {transform: translateY(-5px);}}@keyframes slideInMobile {to {opacity: 1;
+              transform: translateX(0);}}@keyframes fadeInUp {to {opacity: 1;}}
+            </style>
+          </div>
+        </div>
+        <div class="navigation-container4">
+          <div class="navigation-container5">
+            <style>
+              @media (prefers-reduced-motion: reduce) {
+              .navigation__logo-icon {
+                animation: none;
+              }
+              .navigation__link::before, .navigation__social-link, .navigation__mobile, .navigation__mobile-link, .navigation__mobile-cta, .navigation__mobile-social {
+                animation: none;
+                transition: none;
+              }
+              }
+            </style>
+          </div>
+        </div>
+        <div class="navigation-container6">
+          <div class="navigation-container7">
+            <script defer="" data-name="navigation">
+              (function(){
+                const navigationToggle = document.getElementById('navigationToggle')
+                const navigationMobile = document.getElementById('navigationMobile')
+                const navigationMobileLinks = navigationMobile.querySelectorAll(
+                  '.navigation__mobile-link'
+                )
+
+                // Toggle mobile menu
+                navigationToggle.addEventListener('click', () => {
+                  const isExpanded = navigationToggle.getAttribute('aria-expanded') === 'true'
+                  navigationToggle.setAttribute('aria-expanded', !isExpanded)
+                  navigationMobile.classList.toggle('navigation__mobile--active')
+
+                  // Prevent body scroll when menu is open
+                  if (!isExpanded) {
+                    document.body.style.overflow = 'hidden'
+                  } else {
+                    document.body.style.overflow = ''
+                  }
+                })
+
+                // Close mobile menu when clicking a link
+                navigationMobileLinks.forEach((link) => {
+                  link.addEventListener('click', () => {
+                    navigationToggle.setAttribute('aria-expanded', 'false')
+                    navigationMobile.classList.remove('navigation__mobile--active')
+                    document.body.style.overflow = ''
+                  })
+                })
+
+                // Close mobile menu on escape key
+                document.addEventListener('keydown', (e) => {
+                  if (
+                    e.key === 'Escape' &&
+                    navigationMobile.classList.contains('navigation__mobile--active')
+                  ) {
+                    navigationToggle.setAttribute('aria-expanded', 'false')
+                    navigationMobile.classList.remove('navigation__mobile--active')
+                    document.body.style.overflow = ''
+                    navigationToggle.focus()
+                  }
+                })
+
+                // Add shadow on scroll
+                let lastScrollTop = 0
+                window.addEventListener(
+                  'scroll',
+                  () => {
+                    const navigation = document.getElementById('navigation')
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+                    if (scrollTop > 50) {
+                      navigation.style.boxShadow =
+                        '0 6px 30px color-mix(in srgb, var(--color-primary) 20%, transparent)'
+                    } else {
+                      navigation.style.boxShadow =
+                        '0 4px 20px color-mix(in srgb, var(--color-primary) 12%, transparent)'
+                    }
+
+                    lastScrollTop = scrollTop
+                  },
+                  { passive: true }
+                )
+              })()
+            </script>
+          </div>
+        </div>
+        <nav id="navigation" class="navigation">
+          <div class="navigation__container">
+            <a href="#">
+              <div aria-label="Optica Jaziel - Inicio" class="navigation__logo">
+                <span class="navigation__logo-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <circle cx="6" cy="15" r="4"></circle>
+                      <circle cx="18" cy="15" r="4"></circle>
+                      <path
+                        d="M14 15a2 2 0 0 0-2-2a2 2 0 0 0-2 2m-7.5-2L5 7c.7-1.3 1.4-2 3-2m13.5 8L19 7c-.7-1.3-1.5-2-3-2"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <span class="navigation__logo-text">
+                  <span class="navigation-navigationlogo-title">
+                    Optica Jaziel
+                  </span>
+                </span>
+              </div>
+            </a>
+            <div class="navigation__links">
+              <a href="#colecciones">
+                <div class="navigation__link"><span>Colecciones</span></div>
+              </a>
+              <a href="#lentes-sol">
+                <div class="navigation__link"><span>Lentes de Sol</span></div>
+              </a>
+              <a href="#lentes-vista">
+                <div class="navigation__link"><span>Lentes de Vista</span></div>
+              </a>
+              <a href="#examenes">
+                <div class="navigation__link"><span>Exámenes</span></div>
+              </a>
+              <a href="#nosotros">
+                <div class="navigation__link"><span>Nosotros</span></div>
+              </a>
+            </div>
+            <div class="navigation__actions">
+              <div class="navigation__social">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    class="navigation__social-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    class="navigation__social-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <rect
+                          width="20"
+                          height="20"
+                          x="2"
+                          y="2"
+                          rx="5"
+                          ry="5"
+                        ></rect>
+                        <path
+                          d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <a href="#agendar">
+                <div class="navigation__cta btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path d="M8 2v4m8-4v4"></path>
+                      <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                      <path d="M3 10h18"></path>
+                    </g>
+                  </svg>
+                  <span>Agendar Cita</span>
+                </div>
+              </a>
+            </div>
+            <button
+              id="navigationToggle"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              class="navigation__toggle"
+            >
+              <span class="navigation-navigationtoggle-icon1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 5h16M4 12h16M4 19h16"
+                  ></path>
+                </svg>
+              </span>
+              <span class="navigation-navigationtoggle-icon2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 6L6 18M6 6l12 12"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div id="navigationMobile" class="navigation__mobile">
+            <div class="navigation__mobile-content">
+              <div class="navigation__mobile-links">
+                <a href="#colecciones">
+                  <div class="navigation__mobile-link">
+                    <span>Colecciones</span>
+                  </div>
+                </a>
+                <a href="#lentes-sol">
+                  <div class="navigation__mobile-link">
+                    <span>Lentes de Sol</span>
+                  </div>
+                </a>
+                <a href="#lentes-vista">
+                  <div class="navigation__mobile-link">
+                    <span>Lentes de Vista</span>
+                  </div>
+                </a>
+                <a href="#examenes">
+                  <div class="navigation__mobile-link">
+                    <span>Exámenes</span>
+                  </div>
+                </a>
+                <a href="#nosotros">
+                  <div class="navigation__mobile-link">
+                    <span>Nosotros</span>
+                  </div>
+                </a>
+              </div>
+              <div class="navigation__mobile-cta">
+                <a href="#agendar">
+                  <div class="btn btn-primary btn-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path d="M8 2v4m8-4v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                      </g>
+                    </svg>
+                    <span>Agendar Cita</span>
+                  </div>
+                </a>
+              </div>
+              <div class="navigation__mobile-social">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    class="navigation__mobile-social-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    class="navigation__mobile-social-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <rect
+                          width="20"
+                          height="20"
+                          x="2"
+                          y="2"
+                          rx="5"
+                          ry="5"
+                        ></rect>
+                        <path
+                          d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
