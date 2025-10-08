@@ -1,0 +1,31 @@
+{
+  "info": {
+    "name": "Óptica Jaziel",
+    "address": "Av. Guillermo de la Fuente N°475 - Comas",
+    "whatsapp": "+51997424072",
+    "horarios": "Lun-Sab 9:30 - 19:00"
+  },
+  "products": [
+    {
+      "id": 1,
+      "category": "Tratamiento",
+      "name": "Lentes Blue Defense",
+      "price": 120,
+      "img": "https://images.unsplash.com/photo-1515876305429-24181f2ff0f6?auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 2,
+      "category": "Monturas",
+      "name": "Montura Acetato",
+      "price": 140,
+      "img": "https://images.unsplash.com/photo-1519098901909-b1553a8e9b75?auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 3,
+      "category": "Accesorios",
+      "name": "Lentes de Sol Polarizados",
+      "price": 180,
+      "img": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=60"
+    }
+  ]
+}
